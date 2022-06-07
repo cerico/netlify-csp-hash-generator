@@ -1,0 +1,24 @@
+{
+  "name": "netlify-csp-hash-generator",
+  "version": "1.0.0",
+  "description": "Generates hashes for any inline script you have in your html and adds them to the netlify headers file",
+  "main": "generate-hashes.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.11",
+    "js-sha256": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerico/netlify-csp-hash-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerico/netlify-csp-hash-generator/issues"
+  },
+  "homepage": "https://github.com/cerico/netlify-csp-hash-generator#readme"
+}

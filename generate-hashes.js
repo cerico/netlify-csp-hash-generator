@@ -22,11 +22,15 @@ const hashes = `${attributes.map(e => e.base64).join(' ')};`
 fs.readFile(headersFile, 'utf8', function(err, data) {
   const searchString = 'Content-Security-Policy';
   const re = new RegExp('^.*' + searchString + '.*$', 'gm');
-  const orig = data.match(re)[0].slice(0,-1)
-  const full = `${orig} ${hashes}`
-  const formatted = data.replace(re, full);
-
-  fs.writeFile(headersFile, formatted, 'utf8', function(err) {
-    if (err) return console.log(err);
-  });
-});
+  if (data?.match(re)) {
+    const orig = data.match(re)[0].slice(0,-1)
+    const full = `${orig} ${hashes}`
+    const formatted = data.replace(re, full);
+  
+    fs.writeFile(headersFile, formatted, 'utf8', function(err) {
+      if (err) return console.log(err);
+    });
+  } else {
+    console.log("no security policy found")
+  }
+})

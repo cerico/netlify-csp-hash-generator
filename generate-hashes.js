@@ -1,4 +1,3 @@
-☁  kelso:10-prepare-data-once ➜ (main) ✗ cat generate-hashes.js
 'use strict';
 
 const fs = require('fs');

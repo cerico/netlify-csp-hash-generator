@@ -15,3 +15,7 @@ or add to your build process, eg in package.json
     "hashes": "node generate-hashes",
 ...
 ```
+
+### TODO
+
+Make available as npm package
